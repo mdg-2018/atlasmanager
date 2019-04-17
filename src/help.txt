@@ -1,0 +1,42 @@
+Atlas Manager Usage
+
+Arguments
+---------
+
+
+getclusterinfo
+  purpose: lists detailed information about clusters in project
+  options:
+    required: --projectid [yourProjectId]
+    optional: --clustername [nameOfCluster]
+  notes: If cluster name is not specified, info for all clusters in the project will be displayed
+
+getclusternames
+  purpose: returns array containing the names of clusters in the project
+  options:
+    required: --projectid [yourProjectId]
+
+createcluster
+  purpose: create a new cluster in a project
+  options:
+    required: --projectid [yourProjectId]
+    optional: --clusterdefintion [definitionJsonHere] --clusterdefintionfile [filePath]
+    notes: clusterdefintion is a string of json defining the cluster configuration, clusterdefintionfile
+           is a path to a json file containing the cluster definition. Only pass in one of these arguments!
+           If not cluster definition of any kind is provided, an M10 with a random name will be created.
+
+deletecluster
+  purpose: deletes one or all clusters
+  options: 
+    required: --projectid [yourProjectId]
+    optional: --clustername [nameOfCluster] --all
+    notes: Pass in clustername to delete specific cluster, --all will delete all clusters in project permanently!
+
+modifycluster
+  purpose: changes configuration of existing cluster
+  options:
+    required: --projectid [yourProjectId] --clustername [nameOfCluster]
+              Either --clusterdefinition [definitionJsonHere] OR --clusterdefintionfile [filePath]
+
+
+use --help to display this message

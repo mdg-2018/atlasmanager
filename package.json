@@ -1,0 +1,16 @@
+{
+  "name": "atlasmanager",
+  "version": "1.0.0",
+  "description": "A program to control MongoDB Atlas instances via the Atlas API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Grogan",
+  "license": "ISC",
+  "dependencies": {
+    "docker-names": "^1.1.1",
+    "minimist": "^1.2.0",
+    "request": "^2.88.0"
+  }
+}
