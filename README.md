@@ -49,3 +49,13 @@ To get started, rename __config.js to config.js, then specify your username and 
     &nbsp;&nbsp;required: --projectid [yourProjectId] --clustername [nameOfCluster]  
     &nbsp;&nbsp;          Either --clusterdefinition [definitionJsonHere] OR --clusterdefintionfile [filePath]  
 
+***pausecluster***  
+  purpose: pauses a cluster  
+  options:  
+    &nbsp;&nbsp;required: --projectid [yourProjectId] --clustername [nameOfCluster]
+
+***resumecluster***  
+  purpose: resumes a cluster  
+  options:  
+    &nbsp;&nbsp;required: --projectid [yourProjectId] --clustername [nameOfCluster]
+
