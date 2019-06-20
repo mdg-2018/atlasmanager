@@ -133,5 +133,13 @@ module.exports = {
             console.log(JSON.parse(result.body));
             process.exit();
         });
+    },
+    pausecluster: function(projectid, clustername){
+        var pause = '{"paused":true}';
+        this.modifycluster(projectid,clustername,pause);
+    },
+    resumecluster: function(projectid, clustername){
+        var pause = '{"paused":false}';
+        this.modifycluster(projectid,clustername,pause);
     }
 }

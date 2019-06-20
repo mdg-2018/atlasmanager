@@ -32,7 +32,10 @@ if (args._.length > 1) {
             atlascluster.modifycluster(args.projectid, args.clustername, args.clusterdefinition, args.clusterdefinitionfile);
             break;
         case ("pausecluster"):
-            //todo - add pause
+            atlascluster.pausecluster(args.projectid, args.clustername);
+            break;
+        case ("resumecluster"):
+            atlascluster.resumecluster(args.projectid, args.clustername);
             break;
         case ("help"):
             help.displayHelpMessage(function (message) {
