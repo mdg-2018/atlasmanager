@@ -1,5 +1,6 @@
 const atlasrequest = require('./atlasrequest');
 const fs = require('fs');
+var config = require('../config');
 
 function getclusterinfo(projectid, clustername, callback) {
 
@@ -11,10 +12,6 @@ function getclusterinfo(projectid, clustername, callback) {
         callback(JSON.parse(body));
 
     })
-}
-
-function generateCluster(projectid, clusterdefinition) {
-
 }
 
 
@@ -50,14 +47,8 @@ module.exports = {
             var dockerNames = require('docker-names');
             var clustername = dockerNames.getRandomName().replace("_", "-");
 
-            definition = {
-                "name": clustername,
-                "providerSettings": {
-                    "providerName": "AWS",
-                    "instanceSizeName": "M10",
-                    "regionName": "US_EAST_2"
-                }
-            }
+            definition = config.defaultClusterSettings;
+            definition.name = clustername;
         }
 
         if (clusterdefinition != null && clusterdefinitionfile != null) {
